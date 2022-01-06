@@ -16,25 +16,27 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
 const _HEAD_BREAK=500;
-const _INT_NAV_ABOUT='#about';
-const _INT_NAV_PROJECTS='#projects';
-const _INT_NAV_CONTACT='#contact';
+const __INT_NAV={
+    "about":"#about",
+    "projects":"#projects",
+    "contact":"#contact"
+};
 
 // spans width of viewport, lists internal sections of webpage: about, projects, and contacts
 
 const HeadNav = () =>{
-    const {gWidth,gHeight}=useDim();
+    const {gWidth}=useDim();
     const [anElState, setAnElState]=useState(null);
     const isOpen = Boolean(anElState);
     // conditionall render full buttons or hamburger based on viewport width
     
     // for viewports larger than 500 px
-    const bigVP=()=>{
+    const stacks=()=>{
         return (
             <Stack spacing={2} direction='row'>
-                <Button variant='text' href={_INT_NAV_ABOUT}>About</Button>
-                <Button variant='text' href={_INT_NAV_PROJECTS}>Projects</Button>
-                <Button variant='text' href={_INT_NAV_CONTACT}>Contact</Button>
+                <Button variant='text' href={__INT_NAV.about}>About</Button>
+                <Button variant='text' href={__INT_NAV.projects}>Projects</Button>
+                <Button variant='text' href={__INT_NAV.contact}>Contact</Button>
             </Stack>
         )
     }
@@ -49,7 +51,7 @@ const HeadNav = () =>{
         setAnElState(null);
     }
     //jsx for hamburger menu
-    const smallVP=()=>{
+    const hamburgs=()=>{
         return (
             <div className="ham">
                 <Button
@@ -70,9 +72,9 @@ const HeadNav = () =>{
                         'aria-labelledby':'int_nav_button',
                     }}
                 >
-                    <MenuItem onClick={handleClose} href={_INT_NAV_ABOUT}>About</MenuItem>
-                    <MenuItem onClick={handleClose} href={_INT_NAV_PROJECTS}>Projects</MenuItem>
-                    <MenuItem onClick={handleClose} href={_INT_NAV_CONTACT}>Contact</MenuItem>
+                    <MenuItem onClick={handleClose} href={__INT_NAV.about}>About</MenuItem>
+                    <MenuItem onClick={handleClose} href={__INT_NAV.projects}>Projects</MenuItem>
+                    <MenuItem onClick={handleClose} href={__INT_NAV.contact}>Contact</MenuItem>
                 </Menu>
             </div>
         )
@@ -86,9 +88,9 @@ const HeadNav = () =>{
             alignItems='center'
             spacing={2}
         >
-            {gWidth<_HEAD_BREAK?smallVP():null}
+            {gWidth<_HEAD_BREAK?hamburgs():null}
             <Typography variant='h4' className={gWidth>=_HEAD_BREAK?'logo_left':'logo_center'}>Junyan Ye</Typography>
-            {gWidth>=_HEAD_BREAK?bigVP():null}
+            {gWidth>=_HEAD_BREAK?stacks():null}
         </Stack>
     )
 }

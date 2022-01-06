@@ -1,0 +1,14 @@
+{
+    "projs":[
+                {"projInfo":{
+                    "projTitle":"test-title",
+                    "projDesc":"test-desc ipsum lorem salsa tequila institution.",
+                    "projPic":"./placeholder.png",
+                    "projTech":["react","html5"],
+                    "projLive":"https://www.google.com",
+                    "projSrc":"https://github.com",
+                    "projAlt":"testing"
+
+                }}
+            ]
+}
