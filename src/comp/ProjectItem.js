@@ -9,6 +9,8 @@ import CardActionArea from '@mui/material/CardActionArea';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import React,{useState} from 'react';
+
+import '../stylesheets/ProjectItem.scss';
 /*
 projInfo:{
     projTitle,
@@ -21,7 +23,7 @@ projInfo:{
 }
 */
 const ProjectItem=({projInfo})=>{
-    console.log(projInfo);
+
     const [isExpand, setIsExpand]=useState(false);
 
     const handleExpand=()=>{
@@ -29,11 +31,22 @@ const ProjectItem=({projInfo})=>{
     }
     
     const renderProjTxt=()=>{
-        return <Typography>{projInfo.projDesc}</Typography>
+        return <Typography align="justify">{projInfo.projDesc}</Typography>
     }
     const renderTechList=()=>{
-        console.log(projInfo.projTech)
-        const jsx=projInfo.projTech.map(tech=><FontAwesomeIcon icon={["fab",tech]} key={projInfo.projTitle+tech}/>);
+
+        const jsx=projInfo.projTech.map(tech=>{
+            const leKey=`${projInfo.projId}-${tech}`;
+            console.log(projInfo.projId,tech,leKey);
+            if (tech === "mui"){
+                return <img src="./imgs/mui.png" alt="mui logo" className="mui-logo" key={leKey}/>
+            }
+            else if (tech === "d3"){
+                return <img src="./imgs/d3.png" alt="d3 logo" className="d3-logo" key={leKey}/>
+            }
+            else{
+                return <FontAwesomeIcon className="tech-logo" icon={["fab",tech]} key={leKey}/>
+            }});
         return (
             <Stack 
                 direction="row"
@@ -46,14 +59,15 @@ const ProjectItem=({projInfo})=>{
         )
     }
     const renderProjButt=()=>{
-        const liveButt=projInfo.projLive!==""?<Button href={projInfo.projLive} variant="contained" target="_blank" rel="noreferrer">Live</Button>:null;
-        const srcButt=projInfo.projSrc!==""?<Button href={projInfo.projSrc} variant="contained" target="_blank" rel="noreferrer">Src Code</Button>:null;
+        const liveButt=projInfo.projLive!==""?<Button href={projInfo.projLive} variant="outlined" target="_blank" rel="noreferrer">Live</Button>:null;
+        const srcButt=projInfo.projSrc!==""?<Button href={projInfo.projSrc} variant="outlined" target="_blank" rel="noreferrer">Src Code</Button>:null;
         return (
             <Stack
                 direction="row"
                 justifyContent="flex-end"
                 alignItems="center"
                 spacing={3}
+                sx={{margin:1}}
             >
                 {liveButt}
                 {srcButt}
@@ -63,7 +77,7 @@ const ProjectItem=({projInfo})=>{
     // TODO: convert projTech to jsx array of font awesome icons
 
     return (   
-        <Card className="projItem">
+        <Card sx={{width:320}} className="proj-item">
             <CardActionArea onClick={handleExpand}>
             <CardMedia 
                 component="img"
@@ -74,7 +88,7 @@ const ProjectItem=({projInfo})=>{
             />
             <CardContent>
                 {renderTechList()}
-                <Typography variant="h4">{projInfo.projTitle}</Typography>
+                <Typography variant="h5">{projInfo.projTitle}</Typography>
                 {isExpand?renderProjTxt():null}
             </CardContent>
             </CardActionArea>

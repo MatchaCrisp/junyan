@@ -3,6 +3,8 @@ import React, {useState,useEffect} from 'react';
 import ProjectItem from './ProjectItem';
 
 import Typography from '@mui/material/Typography';
+
+import '../stylesheets/Projects.scss';
 const Projects=()=>{
     const [projJsx, setProjJsx]=useState(null);
 
@@ -19,14 +21,16 @@ const Projects=()=>{
         return projJsx.map(proj=>{
             return <ProjectItem 
                 projInfo={proj.projInfo}
-                key={proj.projTitle}
+                key={proj.projId}
         />});
     }
 
     return (
-        <div className="projectCont" id="projects">
+        <div className="project-sect" id="projects">
             <Typography variant="h4">Projects</Typography>
-            {projsToJsx()}
+            <div className="proj-container">
+                {projsToJsx()}
+            </div>
         </div>
     )
 }

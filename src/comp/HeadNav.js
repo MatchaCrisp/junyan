@@ -1,5 +1,6 @@
 // React 
 import React, {useState} from 'react';
+import ElevScroll from './ElevScroll';
 
 // Mui Components
 import Stack from '@mui/material/Stack';
@@ -7,6 +8,8 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
+import AppBar from '@mui/material/AppBar';
+import ToolBar from '@mui/material/Toolbar';
 
 // Viewport hook
 import useDim from '../hook/useDim';
@@ -34,9 +37,9 @@ const HeadNav = () =>{
     const stacks=()=>{
         return (
             <Stack spacing={2} direction='row'>
-                <Button variant='text' href={__INT_NAV.about}>About</Button>
-                <Button variant='text' href={__INT_NAV.projects}>Projects</Button>
-                <Button variant='text' href={__INT_NAV.contact}>Contact</Button>
+                <Button color="secondary" variant='text' href={__INT_NAV.about}>About</Button>
+                <Button color="secondary" variant='text' href={__INT_NAV.projects}>Projects</Button>
+                <Button color="secondary" variant='text' href={__INT_NAV.contact}>Contact</Button>
             </Stack>
         )
     }
@@ -53,8 +56,8 @@ const HeadNav = () =>{
     //jsx for hamburger menu
     const hamburgs=()=>{
         return (
-            <div className="ham">
-                <Button
+            <div className="collapsible-menu">
+                <Button color="secondary"
                     id='int_nav_button'
                     aria-controls={isOpen?'int_nav_menu':undefined}
                     aria-haspopup='true'
@@ -64,6 +67,7 @@ const HeadNav = () =>{
                     {isOpen?<MenuOpenIcon />:<MenuIcon />}
                 </Button>
                 <Menu
+                    sx={{backgroundColor:"secondary"}}
                     id='int_nav_menu'
                     anchorEl={anElState}
                     open={isOpen}
@@ -72,26 +76,39 @@ const HeadNav = () =>{
                         'aria-labelledby':'int_nav_button',
                     }}
                 >
-                    <MenuItem onClick={handleClose} href={__INT_NAV.about}>About</MenuItem>
-                    <MenuItem onClick={handleClose} href={__INT_NAV.projects}>Projects</MenuItem>
-                    <MenuItem onClick={handleClose} href={__INT_NAV.contact}>Contact</MenuItem>
+                    <MenuItem color="secondary" onClick={handleClose} href={__INT_NAV.about}>About</MenuItem>
+                    <MenuItem color="secondary" onClick={handleClose} href={__INT_NAV.projects}>Projects</MenuItem>
+                    <MenuItem color="secondary" onClick={handleClose} href={__INT_NAV.contact}>Contact</MenuItem>
                 </Menu>
             </div>
         )
     }
     
     return (
-        <Stack
-            className='nav_head'
-            direction='row'
-            justifyContent='space-around'
-            alignItems='center'
-            spacing={2}
-        >
-            {gWidth<_HEAD_BREAK?hamburgs():null}
-            <Typography variant='h4' className={gWidth>=_HEAD_BREAK?'logo_left':'logo_center'}>Junyan Ye</Typography>
-            {gWidth>=_HEAD_BREAK?stacks():null}
-        </Stack>
+        <React.Fragment>
+        <ElevScroll>
+                <AppBar
+                    sx={{ backgroundColor: "primOff" }}
+                    className='head-hav-section'
+
+                    spacing={2}
+                >
+                    <ToolBar
+                        sx={{
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                            marginRight: "1rem"
+                        }}
+                    >
+                        {gWidth < _HEAD_BREAK ? hamburgs() : null}
+                        <Typography color="secondary" variant='h4' className={gWidth >= _HEAD_BREAK ? 'logo_left' : 'logo_center'}>Junyan Ye</Typography>
+                        {gWidth >= _HEAD_BREAK ? stacks() : null}
+                    </ToolBar>
+                </AppBar>
+        </ElevScroll>
+        <ToolBar />
+        
+        </React.Fragment>
     )
 }
 

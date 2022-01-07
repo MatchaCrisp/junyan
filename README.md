@@ -22,3 +22,11 @@ HTML5
 ### Jan 5 2022 v 0.3
 - first working draft of all components
 - TODO: theme/styling
+
+### Jan 6 2022 v 0.4
+- import all project info
+- styles set
+- TODO: fix key of project items
+- TODO: style of footer
+- TODO: color palette
+- TODO: fix react flavicon
