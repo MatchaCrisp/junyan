@@ -1,0 +1,17 @@
+.proj-container{
+    max-width:780px;
+    min-width:320px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items:flex-start;
+    align-content:space-around;
+    gap:40px 40px;
+    margin:0 auto;
+
+}
+.project-sect>.MuiTypography-root{
+    margin:0 0 1rem 0;
+}
+

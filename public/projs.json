@@ -1,0 +1,147 @@
+{
+    "projs":[   
+        {"projInfo":{
+            "projId":"1",
+            "projTitle":"Tribute to Madeline Wuntch",
+            "projDesc":"A tribute page made for the fictional character in the TV show Brooklyn 99.",
+            "projPic":"./imgs/tribute.png",
+            "projTech":["html5","css3-alt"],
+            "projLive":"https://matchacrisp.github.io/TributePage.github.io/",
+            "projSrc":"https://github.com/MatchaCrisp/TributePage.github.io",
+            "projAlt":"Tribute Page"
+
+        }},
+        {"projInfo":{
+            "projId":"2",
+            "projTitle":"Doug Judy",
+            "projDesc":"Portfolio website made for the fictional character in the TV show Brooklyn 99.",
+            "projPic":"./imgs/portfolio.png",
+            "projTech":["html5","css3-alt"],
+            "projLive":"https://github.com/MatchaCrisp/PersonalPortfolio.github.io",
+            "projSrc":"https://matchacrisp.github.io/PersonalPortfolio.github.io/",
+            "projAlt":"Personal Portfolio"
+
+        }},
+        {"projInfo":{
+            "projId":"3",
+            "projTitle":"Sleep Study Survey",
+            "projDesc":"A HTML form attempting to discern correlation between certain activities and sleep quality of the participant.",
+            "projPic":"./imgs/survey.png",
+            "projTech":["html5","css3-alt"],
+            "projLive":"https://matchacrisp.github.io/SurveyForm.github.io/",
+            "projSrc":"https://github.com/MatchaCrisp/SurveyForm.github.io",
+            "projAlt":"Survey Form"
+
+        }},
+        {"projInfo":{
+            "projId":"4",
+            "projTitle":"Cheesecake Educations",
+            "projDesc":"Single page website breaking down common types of cheesecakes.",
+            "projPic":"./imgs/cheesecake.png",
+            "projTech":["html5","css3-alt","js-square","bootstrap"],
+            "projLive":"https://matchacrisp.github.io/Cheesecake.github.io/",
+            "projSrc":"https://github.com/MatchaCrisp/Cheesecake.github.io",
+            "projAlt":"Ad Page"
+
+        }},
+        {"projInfo":{
+            "projId":"5",
+            "projTitle":"Sweeties Bakery",
+            "projDesc":"Product landing page demo for a hypothetical cupcakes bakery.",
+            "projPic":"./imgs/cupcake.png",
+            "projTech":["react","html5"],
+            "projLive":"https://matchacrisp.github.io/ProductLanding.github.io/",
+            "projSrc":"https://github.com/MatchaCrisp/ProductLanding.github.io",
+            "projAlt":"Product Landing Page"
+
+        }},
+        {"projInfo":{
+            "projId":"6",
+            "projTitle":"CSS Animation",
+            "projDesc":"A technical documentation written about the CSS used to construct CSS animations and their nuances.",
+            "projPic":"./imgs/technical.png",
+            "projTech":["react","html5"],
+            "projLive":"https://matchacrisp.github.io/TechnicalPage.github.io/",
+            "projSrc":"https://github.com/MatchaCrisp/TechnicalPage.github.io",
+            "projAlt":"Technical Documentations"
+
+        }},
+        {"projInfo":{
+            "projId":"7",
+            "projTitle":"Random Quote Generator",
+            "projDesc":"Spits out a random quote on button press, tweeting functionality included.",
+            "projPic":"./imgs/random.png",
+            "projTech":["react","html5","js-square"],
+            "projLive":"https://matchacrisp.github.io/RandomQuote.github.io/",
+            "projSrc":"https://github.com/MatchaCrisp/RandomQuote.github.io",
+            "projAlt":"Random Quote Machine"
+
+        }},
+        {"projInfo":{
+            "projId":"8",
+            "projTitle":"Markdown Previewer",
+            "projDesc":"Responsive single page website capable of translating markdown into HTML on the fly.",
+            "projPic":"./imgs/markdown.png",
+            "projTech":["react","html5","sass"],
+            "projLive":"https://matchacrisp.github.io/MarkdownPreview.github.io/",
+            "projSrc":"https://github.com/MatchaCrisp/MarkdownPreview.github.io",
+            "projAlt":"Mardown Preview"
+
+        }},
+        {"projInfo":{
+            "projId":"9",
+            "projTitle":"Drum Machine",
+            "projDesc":"A collection of wacky sounds available at the press of a button!",
+            "projPic":"./imgs/drum.png",
+            "projTech":["react","html5","sass"],
+            "projLive":"https://matchacrisp.github.io/DrumMachine/",
+            "projSrc":"https://github.com/MatchaCrisp/DrumMachine",
+            "projAlt":"Drum Machine"
+
+        }},
+        {"projInfo":{
+            "projId":"10",
+            "projTitle":"Calculator",
+            "projDesc":"A calculator powered by JavaScript, complete with history functionalities.",
+            "projPic":"./imgs/calc.png",
+            "projTech":["react","html5", "sass", "js-square"],
+            "projLive":"https://matchacrisp.github.io/JSCalculator/",
+            "projSrc":"https://github.com/MatchaCrisp/JSCalculator",
+            "projAlt":"JS Calculator"
+
+        }},
+        {"projInfo":{
+            "projId":"11",
+            "projTitle":"Pomodoro Productivity Counter",
+            "projDesc":"A productivity clock adhering to the 25/5 philosophy of pomodoro.",
+            "projPic":"./imgs/pomodoro.png",
+            "projTech":["react","html5","sass","mui"],
+            "projLive":"https://matchacrisp.github.io/pomodoro/",
+            "projSrc":"https://github.com/MatchaCrisp/pomodoro",
+            "projAlt":"Pomodoro Clock"
+
+        }},
+        {"projInfo":{
+            "projId":"12",
+            "projTitle":"Virtual Brokerage",
+            "projDesc":"Functional brokerage capable of simulating simple stock trading activities, and keeping track of user performance.",
+            "projPic":"./imgs/exchange.png",
+            "projTech":["html5","css3-alt","python"],
+            "projLive":"",
+            "projSrc":"https://github.com/MatchaCrisp/VirtualExchange",
+            "projAlt":"Virtual Brokerage"
+
+        }},
+        {"projInfo":{
+            "projId":"13",
+            "projTitle":"Rando-Poll",
+            "projDesc":"Live web app where users can participate in random surveys weekly.",
+            "projPic":"./imgs/poll.png",
+            "projTech":["react","html5","python","d3","sass"],
+            "projLive":"http://rando-poll.herokuapp.com",
+            "projSrc":"https://github.com/MatchaCrisp/RandoPoll",
+            "projAlt":"Random Poll"
+
+        }}
+            ]
+}

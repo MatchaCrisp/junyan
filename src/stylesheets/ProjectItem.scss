@@ -1,0 +1,13 @@
+.mui-logo, .d3-logo,.tech-logo{
+    height: 1.5rem;
+    width:1.5rem;
+    font-size:1.5rem;
+}
+
+.proj-item .MuiCardContent-root{
+    margin:0.25rem;
+    & .MuiTypography-h5{
+        margin:0.25rem 0 0.25rem 0;
+    }
+
+}
