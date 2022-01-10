@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/junyan/static/css/main.a5ec0203.css",
-    "main.js": "/junyan/static/js/main.8589d2bc.js",
-    "index.html": "/junyan/index.html",
-    "main.a5ec0203.css.map": "/junyan/static/css/main.a5ec0203.css.map",
-    "main.8589d2bc.js.map": "/junyan/static/js/main.8589d2bc.js.map"
+    "main.css": "/static/css/main.a5ec0203.css",
+    "main.js": "/static/js/main.8589d2bc.js",
+    "index.html": "/index.html",
+    "main.a5ec0203.css.map": "/static/css/main.a5ec0203.css.map",
+    "main.8589d2bc.js.map": "/static/js/main.8589d2bc.js.map"
   },
   "entrypoints": [
     "static/css/main.a5ec0203.css",
