@@ -18,10 +18,12 @@ const Projects=()=>{
         if (projJsx==null){
             return null;
         }
-        return projJsx.map(proj=>{
+        return projJsx.reverse().map((proj,ind)=>{
+            const leKey=`proj${proj.projInfo.projId}`;
+
             return <ProjectItem 
                 projInfo={proj.projInfo}
-                key={proj.projId}
+                key={leKey}
         />});
     }
 

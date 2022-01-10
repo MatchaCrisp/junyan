@@ -30,3 +30,10 @@ HTML5
 - TODO: style of footer
 - TODO: color palette
 - TODO: fix react flavicon
+
+### Jan 9 2022 v 0.5 MVP
+- set styles to be consistent: colors to sass, positioning to mui sx
+- set colors
+- fix key of proj-item
+- add flavicon
+- TODO: refactor/comment/cleanup

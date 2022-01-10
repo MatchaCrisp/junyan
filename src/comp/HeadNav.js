@@ -1,5 +1,5 @@
 // React 
-import React, {useState} from 'react';
+import React, {useState, Fragment} from 'react';
 import ElevScroll from './ElevScroll';
 
 // Mui Components
@@ -10,15 +10,13 @@ import MenuItem from '@mui/material/MenuItem';
 import Typography from '@mui/material/Typography';
 import AppBar from '@mui/material/AppBar';
 import ToolBar from '@mui/material/Toolbar';
-
-// Viewport hook
-import useDim from '../hook/useDim';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 // icons
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
-const _HEAD_BREAK=500;
+import '../stylesheets/HeadNav.scss';
 const __INT_NAV={
     "about":"#about",
     "projects":"#projects",
@@ -28,18 +26,19 @@ const __INT_NAV={
 // spans width of viewport, lists internal sections of webpage: about, projects, and contacts
 
 const HeadNav = () =>{
-    const {gWidth}=useDim();
     const [anElState, setAnElState]=useState(null);
     const isOpen = Boolean(anElState);
     // conditionall render full buttons or hamburger based on viewport width
     
+    const isDeskSz=useMediaQuery('(min-width:700px)');
+
     // for viewports larger than 500 px
     const stacks=()=>{
         return (
             <Stack spacing={2} direction='row'>
-                <Button color="secondary" variant='text' href={__INT_NAV.about}>About</Button>
-                <Button color="secondary" variant='text' href={__INT_NAV.projects}>Projects</Button>
-                <Button color="secondary" variant='text' href={__INT_NAV.contact}>Contact</Button>
+                <Button variant='text' href={__INT_NAV.about}>About</Button>
+                <Button variant='text' href={__INT_NAV.projects}>Projects</Button>
+                <Button variant='contained' href={__INT_NAV.contact}>Contact</Button>
             </Stack>
         )
     }
@@ -57,7 +56,7 @@ const HeadNav = () =>{
     const hamburgs=()=>{
         return (
             <div className="collapsible-menu">
-                <Button color="secondary"
+                <Button 
                     id='int_nav_button'
                     aria-controls={isOpen?'int_nav_menu':undefined}
                     aria-haspopup='true'
@@ -67,7 +66,6 @@ const HeadNav = () =>{
                     {isOpen?<MenuOpenIcon />:<MenuIcon />}
                 </Button>
                 <Menu
-                    sx={{backgroundColor:"secondary"}}
                     id='int_nav_menu'
                     anchorEl={anElState}
                     open={isOpen}
@@ -76,21 +74,20 @@ const HeadNav = () =>{
                         'aria-labelledby':'int_nav_button',
                     }}
                 >
-                    <MenuItem color="secondary" onClick={handleClose} href={__INT_NAV.about}>About</MenuItem>
-                    <MenuItem color="secondary" onClick={handleClose} href={__INT_NAV.projects}>Projects</MenuItem>
-                    <MenuItem color="secondary" onClick={handleClose} href={__INT_NAV.contact}>Contact</MenuItem>
+                    <MenuItem onClick={handleClose} href={__INT_NAV.about}>About</MenuItem>
+                    <MenuItem onClick={handleClose} href={__INT_NAV.projects}>Projects</MenuItem>
+                    <MenuItem onClick={handleClose} href={__INT_NAV.contact}>Contact</MenuItem>
                 </Menu>
             </div>
         )
     }
     
     return (
-        <React.Fragment>
+        <Fragment>
         <ElevScroll>
                 <AppBar
-                    sx={{ backgroundColor: "primOff" }}
-                    className='head-hav-section'
-
+                    className='head-nav-section'
+                    id="head-nav"
                     spacing={2}
                 >
                     <ToolBar
@@ -100,15 +97,14 @@ const HeadNav = () =>{
                             marginRight: "1rem"
                         }}
                     >
-                        {gWidth < _HEAD_BREAK ? hamburgs() : null}
-                        <Typography color="secondary" variant='h4' className={gWidth >= _HEAD_BREAK ? 'logo_left' : 'logo_center'}>Junyan Ye</Typography>
-                        {gWidth >= _HEAD_BREAK ? stacks() : null}
+                        <Typography variant='h4' sx={{marginLeft:1}}>Junyan Ye</Typography>
+                        {isDeskSz ? stacks() : hamburgs()}
                     </ToolBar>
                 </AppBar>
         </ElevScroll>
         <ToolBar />
         
-        </React.Fragment>
+        </Fragment>
     )
 }
 

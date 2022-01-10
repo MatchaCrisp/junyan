@@ -1,0 +1,22 @@
+@import "__var.scss";
+
+#head-nav{
+    background-color: $col-prim;
+    & .MuiTypography-h4{
+        color:$col-li-gray;
+    }
+    & .MuiButton-contained{
+        color:$col-dk-gray;
+        background-color:$col-acc;
+    }
+    & .MuiButton-text{
+        color:$col-acc;
+    }
+}
+
+#int_nav_menu{
+    & .MuiList-root{
+        background-color: $col-prim;
+        color:$col-li-gray;
+    }
+}

@@ -1,6 +1,10 @@
 {
+  "author":"Junyan Ye",
+  "description":"Personal Portfolio",
+  "license":"MIT",
   "name": "junyan-portfolio",
-  "version": "0.1.0",
+  "keywords":["portfolio", "projects"],
+  "version": "0.4.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",

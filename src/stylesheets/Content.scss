@@ -1,8 +1,15 @@
+@import "__var.scss";
+
 .main_content{
-    max-width:760px;
-    min-width:320px;
+
+    max-width:800px;
+    min-width:360px;
     display:flex;
     flex-direction:column;
     gap:20px;
     margin:0 auto;
+    padding:20px;
+    background-color: $col-prim;
+    color:$col-li-gray;
+
 }

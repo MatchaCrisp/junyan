@@ -31,13 +31,13 @@ const ProjectItem=({projInfo})=>{
     }
     
     const renderProjTxt=()=>{
-        return <Typography align="justify">{projInfo.projDesc}</Typography>
+        return <Typography align="center">{projInfo.projDesc}</Typography>
     }
     const renderTechList=()=>{
 
         const jsx=projInfo.projTech.map(tech=>{
             const leKey=`${projInfo.projId}-${tech}`;
-            console.log(projInfo.projId,tech,leKey);
+
             if (tech === "mui"){
                 return <img src="./imgs/mui.png" alt="mui logo" className="mui-logo" key={leKey}/>
             }
@@ -88,7 +88,7 @@ const ProjectItem=({projInfo})=>{
             />
             <CardContent>
                 {renderTechList()}
-                <Typography variant="h5">{projInfo.projTitle}</Typography>
+                <Typography variant="h5" align="center">{projInfo.projTitle}</Typography>
                 {isExpand?renderProjTxt():null}
             </CardContent>
             </CardActionArea>

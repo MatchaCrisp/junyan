@@ -1,0 +1,9 @@
+@import '__var.scss';
+
+#contact{
+    background-color: $col-prim;
+    color:$col-li-gray;
+    & a{
+        color:$col-acc;
+    }
+}
