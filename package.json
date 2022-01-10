@@ -1,11 +1,15 @@
 {
-  "author":"Junyan Ye",
-  "description":"Personal Portfolio",
-  "license":"MIT",
+  "author": "Junyan Ye",
+  "description": "Personal Portfolio",
+  "license": "MIT",
   "name": "junyan-portfolio",
-  "keywords":["portfolio", "projects"],
-  "version": "0.4.0",
+  "keywords": [
+    "portfolio",
+    "projects"
+  ],
+  "version": "0.5.1",
   "private": true,
+  "homepage":"https://matchacrisp.github.io/junyan",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
@@ -24,7 +28,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -43,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

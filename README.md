@@ -36,4 +36,5 @@ HTML5
 - set colors
 - fix key of proj-item
 - add flavicon
+- redir to godaddy
 - TODO: refactor/comment/cleanup
