@@ -9,7 +9,7 @@
   ],
   "version": "0.5.1",
   "private": true,
-  "homepage":"https://matchacrisp.github.io/junyan",
+  "homepage":"https://matchacrisp.github.io/",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
