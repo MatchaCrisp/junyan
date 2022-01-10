@@ -7,9 +7,9 @@
     "portfolio",
     "projects"
   ],
-  "version": "0.5.1",
+  "version": "0.5.4",
   "private": true,
-  "homepage":"https://matchacrisp.github.io/",
+  "homepage":"https://matchacrisp.github.io/junyan",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
