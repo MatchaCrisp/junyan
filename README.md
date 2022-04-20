@@ -38,3 +38,12 @@ HTML5
 - add flavicon
 - redir to godaddy
 - TODO: refactor/comment/cleanup
+
+### Apr 19 2022 v 0.6 Restyling
+- refactored code
+- added comments
+- cleaned up useless code
+- TODO: search/sort/filter function
+- TODO: JS banner (stars on black backdrop?)
+- TODO: new theme: black & white, straight edge buttons
+- TODO: change to max 4 columns for projects (ultrawide monitor)

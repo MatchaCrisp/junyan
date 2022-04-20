@@ -1,8 +1,9 @@
+// EXTERNAL
 // React 
 import React, {useState, Fragment} from 'react';
 import ElevScroll from './ElevScroll';
 
-// Mui Components
+// MUI Components
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
@@ -11,28 +12,30 @@ import Typography from '@mui/material/Typography';
 import AppBar from '@mui/material/AppBar';
 import ToolBar from '@mui/material/Toolbar';
 import useMediaQuery from '@mui/material/useMediaQuery';
-
-// icons
+// MUI icons
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
+// INTERNAL
 import '../stylesheets/HeadNav.scss';
+
+// constant converting certain keywords into internal navigation links
 const __INT_NAV={
     "about":"#about",
     "projects":"#projects",
     "contact":"#contact"
 };
 
-// spans width of viewport, lists internal sections of webpage: about, projects, and contacts
-
+// spans width of viewport, internal sections of webpage: about, projects, and contacts
 const HeadNav = () =>{
-    const [anElState, setAnElState]=useState(null);
+    // hamburger menu (only for viewports narrower than 700 px)
+    const [anchorElState, setAnchorElState]=useState(null);
     const isOpen = Boolean(anElState);
-    // conditionall render full buttons or hamburger based on viewport width
-    
+
+    // conditionally render full buttons or hamburger based on viewport width
     const isDeskSz=useMediaQuery('(min-width:700px)');
 
-    // for viewports larger than 500 px
+    // for viewports wider than 700 px
     const stacks=()=>{
         return (
             <Stack spacing={2} direction='row'>
@@ -43,14 +46,14 @@ const HeadNav = () =>{
         )
     }
     
-    // for viewports under 500 px
+    // for viewports under 700 px
     //handles opening hamburger menu
     const handleOpen=e=>{
-        setAnElState(e.currentTarget);
+        setAnchorElState(e.currentTarget);
     }
     //handles closing hamburger menu
     const handleClose=()=>{
-        setAnElState(null);
+        setAnchorElState(null);
     }
     //jsx for hamburger menu
     const hamburgs=()=>{
@@ -66,8 +69,8 @@ const HeadNav = () =>{
                     {isOpen?<MenuOpenIcon />:<MenuIcon />}
                 </Button>
                 <Menu
-                    id='int_nav_menu'
-                    anchorEl={anElState}
+                    id='int-nav-menu'
+                    anchorEl={anchorElState}
                     open={isOpen}
                     onClose={handleClose}
                     MenuListProps={{
@@ -86,7 +89,7 @@ const HeadNav = () =>{
         <Fragment>
         <ElevScroll>
                 <AppBar
-                    className='head-nav-section'
+                    className='HeadNav'
                     id="head-nav"
                     spacing={2}
                 >

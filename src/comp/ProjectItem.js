@@ -1,3 +1,8 @@
+// EXTERNAL
+// react
+import React,{useState} from 'react';
+
+// MUI components
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -6,24 +11,27 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 
+// font awesome icons
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import React,{useState} from 'react';
-
+// INTERNAL
 import '../stylesheets/ProjectItem.scss';
+
+// structure of the passed in object
 /*
 projInfo:{
-    projTitle,
-    projDesc,
-    projPic,
-    projTech,
-    projLive,
-    projSrc,
-    projAlt
+    projTitle:string=descriptive project title
+    projDesc:string=short summary of project
+    projPic:string=relative path to thumbnail
+    projTech:string[]=list of technologies used in project
+    projLive:string=url to live demo of project
+    projSrc:string=url to github code
+    projAlt:string=alt text for accessibility purposes
 }
 */
 const ProjectItem=({projInfo})=>{
 
+    // description is hidden by default
     const [isExpand, setIsExpand]=useState(false);
 
     const handleExpand=()=>{
@@ -33,6 +41,7 @@ const ProjectItem=({projInfo})=>{
     const renderProjTxt=()=>{
         return <Typography align="center">{projInfo.projDesc}</Typography>
     }
+    // turns tech array into jsx array of font awesome icons
     const renderTechList=()=>{
 
         const jsx=projInfo.projTech.map(tech=>{
@@ -58,6 +67,7 @@ const ProjectItem=({projInfo})=>{
             </Stack>
         )
     }
+    // return jsx array of buttons that corresponds to live demo/github link (if exists)
     const renderProjButt=()=>{
         const liveButt=projInfo.projLive!==""?<Button href={projInfo.projLive} variant="outlined" target="_blank" rel="noreferrer">Live</Button>:null;
         const srcButt=projInfo.projSrc!==""?<Button href={projInfo.projSrc} variant="outlined" target="_blank" rel="noreferrer">Src Code</Button>:null;
@@ -74,10 +84,9 @@ const ProjectItem=({projInfo})=>{
             </Stack>
         )
     }
-    // TODO: convert projTech to jsx array of font awesome icons
 
     return (   
-        <Card sx={{width:320}} className="proj-item">
+        <Card sx={{width:320}} className="ProjectItem">
             <CardActionArea onClick={handleExpand}>
             <CardMedia 
                 component="img"

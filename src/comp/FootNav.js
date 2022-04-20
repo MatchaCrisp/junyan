@@ -1,13 +1,20 @@
+// EXTERNAL
+// react
 import React from 'react';
 
+// mui components
 import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
+// font awesome icons
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 
+// INTERNAL
 import '../stylesheets/FootNav.scss';
+
+// stores links relevant to website described by key
 const __LINKS={
     "github":{link:"https://github.com/MatchaCrisp",
              desc:"https://github.com/MatchaCrisp"},
@@ -16,12 +23,15 @@ const __LINKS={
     "email":{link:"mailto:bill@junyanye.com",
              desc:"bill@junyanye.com"}
 }
+
 const FootNav=()=>{
+    // responsive breakpoint at viewport width 1000px
     const isDeskSz=useMediaQuery(`(min-width:1000px)`);
+    
     return (
  
         <Stack 
-            className="footNav" 
+            className="FootNav" 
             id="contact"
             flexDirection={isDeskSz?"row":"column"}
             justifyContent="space-around"

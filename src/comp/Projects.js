@@ -1,15 +1,22 @@
+// EXTERNAL
+// react
 import React, {useState,useEffect} from 'react';
 
-import ProjectItem from './ProjectItem';
-
+// MUI components
 import Typography from '@mui/material/Typography';
+
+// INTERNAL
+import ProjectItem from './ProjectItem';
 
 import '../stylesheets/Projects.scss';
 const Projects=()=>{
     const [projJsx, setProjJsx]=useState(null);
 
+    // fetch list of personal projects
     useEffect(()=>{
-        fetch("./projs.json").then((data)=>data.json()).then(({projs})=>{
+        fetch("./projs.json")
+        .then((data)=>data.json())
+        .then(({projs})=>{
             setProjJsx(projs);
         }).catch((e)=>console.log(e))
 
@@ -18,6 +25,8 @@ const Projects=()=>{
         if (projJsx==null){
             return null;
         }
+        // newest project first
+        // TODO: implement sort / search / filter function
         return projJsx.reverse().map((proj,ind)=>{
             const leKey=`proj${proj.projInfo.projId}`;
 
@@ -28,9 +37,9 @@ const Projects=()=>{
     }
 
     return (
-        <div className="project-sect" id="projects">
+        <div className="Projects" id="projects-sect">
             <Typography variant="h4">Projects</Typography>
-            <div className="proj-container">
+            <div className="ProjContainer">
                 {projsToJsx()}
             </div>
         </div>
