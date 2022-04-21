@@ -3,23 +3,23 @@
         {"projInfo":{
             "projId":"1",
             "projTitle":"Tribute to Madeline Wuntch",
-            "projDesc":"A tribute page made for the fictional character in the TV show Brooklyn 99.",
+            "projDesc":"A tribute page made for the fictional character, Madeline Wuntch, in the TV show Brooklyn 99.",
             "projPic":"./imgs/tribute.png",
             "projTech":["html5","css3-alt"],
             "projLive":"https://matchacrisp.github.io/TributePage.github.io/",
             "projSrc":"https://github.com/MatchaCrisp/TributePage.github.io",
-            "projAlt":"Tribute Page"
+            "projAlt":"An image screenshot of the Madeline Wuntch tribute page"
 
         }},
         {"projInfo":{
             "projId":"2",
             "projTitle":"Doug Judy",
-            "projDesc":"Portfolio website made for the fictional character in the TV show Brooklyn 99.",
+            "projDesc":"Portfolio website made for the fictional character, Doug Judy, in the TV show Brooklyn 99.",
             "projPic":"./imgs/portfolio.png",
             "projTech":["html5","css3-alt"],
             "projLive":"https://github.com/MatchaCrisp/PersonalPortfolio.github.io",
             "projSrc":"https://matchacrisp.github.io/PersonalPortfolio.github.io/",
-            "projAlt":"Personal Portfolio"
+            "projAlt":"An image screenshot of the portfolio page of Doug Judy"
 
         }},
         {"projInfo":{
@@ -30,7 +30,7 @@
             "projTech":["html5","css3-alt"],
             "projLive":"https://matchacrisp.github.io/SurveyForm.github.io/",
             "projSrc":"https://github.com/MatchaCrisp/SurveyForm.github.io",
-            "projAlt":"Survey Form"
+            "projAlt":"An image screenshot of the sleep study survey webpage"
 
         }},
         {"projInfo":{
@@ -41,7 +41,7 @@
             "projTech":["html5","css3-alt","js-square","bootstrap"],
             "projLive":"https://matchacrisp.github.io/Cheesecake.github.io/",
             "projSrc":"https://github.com/MatchaCrisp/Cheesecake.github.io",
-            "projAlt":"Ad Page"
+            "projAlt":"An image screenshot of the cheesecake education webpage"
 
         }},
         {"projInfo":{
@@ -52,18 +52,18 @@
             "projTech":["react","html5"],
             "projLive":"https://matchacrisp.github.io/ProductLanding.github.io/",
             "projSrc":"https://github.com/MatchaCrisp/ProductLanding.github.io",
-            "projAlt":"Product Landing Page"
+            "projAlt":"An image screenshot of the landing page for the mock bakery business"
 
         }},
         {"projInfo":{
             "projId":"6",
-            "projTitle":"CSS Animation",
+            "projTitle":"CSS Animation Doc",
             "projDesc":"A technical documentation written about the CSS used to construct CSS animations and their nuances.",
             "projPic":"./imgs/technical.png",
             "projTech":["react","html5"],
             "projLive":"https://matchacrisp.github.io/TechnicalPage.github.io/",
             "projSrc":"https://github.com/MatchaCrisp/TechnicalPage.github.io",
-            "projAlt":"Technical Documentations"
+            "projAlt":"An image screenshot of the technical documentation page going over CSS animations"
 
         }},
         {"projInfo":{
@@ -74,7 +74,7 @@
             "projTech":["react","html5","js-square"],
             "projLive":"https://matchacrisp.github.io/RandomQuote.github.io/",
             "projSrc":"https://github.com/MatchaCrisp/RandomQuote.github.io",
-            "projAlt":"Random Quote Machine"
+            "projAlt":"An image screenshot of the random quote generator webpage"
 
         }},
         {"projInfo":{
@@ -85,7 +85,7 @@
             "projTech":["react","html5","sass"],
             "projLive":"https://matchacrisp.github.io/MarkdownPreview.github.io/",
             "projSrc":"https://github.com/MatchaCrisp/MarkdownPreview.github.io",
-            "projAlt":"Mardown Preview"
+            "projAlt":"An image screenshot of the markdown previewer webpage"
 
         }},
         {"projInfo":{
@@ -96,7 +96,7 @@
             "projTech":["react","html5","sass"],
             "projLive":"https://matchacrisp.github.io/DrumMachine/",
             "projSrc":"https://github.com/MatchaCrisp/DrumMachine",
-            "projAlt":"Drum Machine"
+            "projAlt":"An image screenshot of the drum machine webpage"
 
         }},
         {"projInfo":{
@@ -107,7 +107,7 @@
             "projTech":["react","html5", "sass", "js-square"],
             "projLive":"https://matchacrisp.github.io/JSCalculator/",
             "projSrc":"https://github.com/MatchaCrisp/JSCalculator",
-            "projAlt":"JS Calculator"
+            "projAlt":"An image screenshot of the JS calculator webpage"
 
         }},
         {"projInfo":{
@@ -118,7 +118,7 @@
             "projTech":["react","html5","sass","mui"],
             "projLive":"https://matchacrisp.github.io/pomodoro/",
             "projSrc":"https://github.com/MatchaCrisp/pomodoro",
-            "projAlt":"Pomodoro Clock"
+            "projAlt":"An image screenshot of the pomodoro clock webpage"
 
         }},
         {"projInfo":{
@@ -129,7 +129,7 @@
             "projTech":["html5","css3-alt","python"],
             "projLive":"",
             "projSrc":"https://github.com/MatchaCrisp/VirtualExchange",
-            "projAlt":"Virtual Brokerage"
+            "projAlt":"An image screenshot of the virtual brokerage webapp"
 
         }},
         {"projInfo":{
@@ -138,9 +138,9 @@
             "projDesc":"Live web app where users can participate in random surveys weekly.",
             "projPic":"./imgs/poll.png",
             "projTech":["react","html5","python","d3","sass"],
-            "projLive":"http://rando-poll.herokuapp.com",
+            "projLive":"",
             "projSrc":"https://github.com/MatchaCrisp/RandoPoll",
-            "projAlt":"Random Poll"
+            "projAlt":"An image screenshot of the random poll webapp"
 
         }}
             ]
