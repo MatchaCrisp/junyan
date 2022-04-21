@@ -30,7 +30,7 @@ const __INT_NAV={
 const HeadNav = () =>{
     // hamburger menu (only for viewports narrower than 700 px)
     const [anchorElState, setAnchorElState]=useState(null);
-    const isOpen = Boolean(anElState);
+    const isOpen = Boolean(anchorElState);
 
     // conditionally render full buttons or hamburger based on viewport width
     const isDeskSz=useMediaQuery('(min-width:700px)');
@@ -60,8 +60,8 @@ const HeadNav = () =>{
         return (
             <div className="collapsible-menu">
                 <Button 
-                    id='int_nav_button'
-                    aria-controls={isOpen?'int_nav_menu':undefined}
+                    id='int-nav-button'
+                    aria-controls={isOpen?'int-nav-menu':undefined}
                     aria-haspopup='true'
                     aria-expanded={isOpen?'true':undefined}
                     onClick={handleOpen}
@@ -74,7 +74,7 @@ const HeadNav = () =>{
                     open={isOpen}
                     onClose={handleClose}
                     MenuListProps={{
-                        'aria-labelledby':'int_nav_button',
+                        'aria-labelledby':'int-nav-button',
                     }}
                 >
                     <MenuItem onClick={handleClose} href={__INT_NAV.about}>About</MenuItem>

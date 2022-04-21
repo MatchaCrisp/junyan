@@ -8,22 +8,24 @@
 
 .tech-logo{
     font-size:1.5rem;
-    color:$col-li-gray;
+    color:$txt-blk1;
 }
 
 .ProjectItem.MuiPaper-root {
-    background-color: $col-sec;
+    background-color: $col-wht1;
     
     & .MuiCardContent-root{
         margin:0.25rem;
-        color:$col-li-gray;
+        color:$txt-blk1;
         & .MuiTypography-h5{
             margin:0.25rem 0 0.25rem 0;
         }
     
     }
     & .MuiButton-outlined{
-        color:$col-acc;
+        color:$txt-blk1;
+        border-radius:1px;
+        border-width:2px;
     }
 
 }

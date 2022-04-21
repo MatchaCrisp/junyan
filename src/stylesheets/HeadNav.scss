@@ -1,22 +1,26 @@
 @import "__var.scss";
 
 #head-nav{
-    background-color: $col-prim;
+    background-color: $col-blk1;
     & .MuiTypography-h4{
-        color:$col-li-gray;
+        color:$txt-wht1;
     }
     & .MuiButton-contained{
-        color:$col-dk-gray;
-        background-color:$col-acc;
+        color:$txt-blk1;
+        background-color:$col-wht1;
+        border-radius:0;
+        border-width:2px;
     }
     & .MuiButton-text{
-        color:$col-acc;
+        color:$txt-wht1;
+        border-radius:0;
+        border-width:2px;
     }
 }
 
 #int-nav-menu{
     & .MuiList-root{
-        background-color: $col-prim;
-        color:$col-li-gray;
+        background-color: $col-blk1;
+        color:$txt-wht1;
     }
 }

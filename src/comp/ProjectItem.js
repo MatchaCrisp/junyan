@@ -15,8 +15,10 @@ import CardActionArea from '@mui/material/CardActionArea';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 // INTERNAL
+import muiIcon from '../imgs/mui.png';
+import d3Icon from '../imgs/d3.png';
+import images from '../imgs/ind.js';
 import '../stylesheets/ProjectItem.scss';
-
 // structure of the passed in object
 /*
 projInfo:{
@@ -48,10 +50,10 @@ const ProjectItem=({projInfo})=>{
             const leKey=`${projInfo.projId}-${tech}`;
 
             if (tech === "mui"){
-                return <img src="./imgs/mui.png" alt="mui logo" className="mui-logo" key={leKey}/>
+                return <img src={muiIcon} alt="mui logo" className="mui-logo" key={leKey}/>
             }
             else if (tech === "d3"){
-                return <img src="./imgs/d3.png" alt="d3 logo" className="d3-logo" key={leKey}/>
+                return <img src={d3Icon} alt="d3 logo" className="d3-logo" key={leKey}/>
             }
             else{
                 return <FontAwesomeIcon className="tech-logo" icon={["fab",tech]} key={leKey}/>
@@ -85,6 +87,7 @@ const ProjectItem=({projInfo})=>{
         )
     }
 
+
     return (   
         <Card sx={{width:320}} className="ProjectItem">
             <CardActionArea onClick={handleExpand}>
@@ -92,7 +95,7 @@ const ProjectItem=({projInfo})=>{
                 component="img"
                 width="320"
                 height="160"
-                image={projInfo.projPic}
+                image={images[projInfo.projPic]}
                 alt={projInfo.projAlt}
             />
             <CardContent>

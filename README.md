@@ -47,3 +47,9 @@ HTML5
 - TODO: JS banner (stars on black backdrop?)
 - TODO: new theme: black & white, straight edge buttons
 - TODO: change to max 4 columns for projects (ultrawide monitor)
+
+### Apr 19 2022 v 0.6.1 Restyling
+- tentative new theme
+- changed to max 3 columns
+- restructured file tree to faciliate img import and project import 
+- eliminated need for fetch

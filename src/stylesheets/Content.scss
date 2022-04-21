@@ -1,15 +1,14 @@
 @import "__var.scss";
 
 .Content{
-
-    max-width:800px;
+    max-width:1460px;
     min-width:360px;
     display:flex;
     flex-direction:column;
     gap:20px;
     margin:0 auto;
     padding:20px;
-    background-color: $col-prim;
-    color:$col-li-gray;
+    background-color: $col-wht1;
+    color:$txt-blk1;
 
 }

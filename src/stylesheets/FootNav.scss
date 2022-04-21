@@ -1,9 +1,9 @@
 @import '__var.scss';
 
 #contact{
-    background-color: $col-prim;
-    color:$col-li-gray;
+    background-color: $col-blk1;
+    color:$txt-wht1;
     & a{
-        color:$col-acc;
+        color:$txt-wht1;
     }
 }
