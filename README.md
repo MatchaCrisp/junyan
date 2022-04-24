@@ -54,8 +54,18 @@ HTML5
 - restructured file tree to faciliate img import and project import 
 - eliminated need for fetch
 
-### Apr 21 2022 v 0.6.2 New functions
+### Apr 21 2022 v 0.7.0 New functions
 - add sort through mui select menu
 
-### Apr 23 2022 v 0.6.3 New functions
+### Apr 23 2022 v 0.8.0 New functions
 - add search function through text input field (untested)
+
+### Apr 23 2022 v 0.8.1 Testing
+- fixed a bug in search that rendered "invalid character" error message at all times.
+- fixed typeerror caused by inconsistent naming
+- fixed typeerror caused by improper use of data json
+- added longer helper text to searcher for clarity
+- added mobile media query for searcher for more consistent look
+- fixed footer to bottom of page in event of no projects (search yielded no match)
+- added helper text in event of search yielding no match
+- fixed inconsistencies in new theme

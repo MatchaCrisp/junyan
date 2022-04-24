@@ -88,15 +88,15 @@ const Projects=()=>{
 
         // newest project first
         // TODO: implement sort / search / filter function
-        return proj
+        const filteredProj=proj
         .filter((proj)=>{
             if (!isInvalid){
-                if (proj.projTitle.contains(filterStr)){
+                if (proj.projInfo.projTitle.includes(filterStr)){
                     return true;
                 }
                 else{
-                    for (const tech of proj.projTech){
-                        if (tech.contains(filterStr)){
+                    for (const tech of proj.projInfo.projTech){
+                        if (tech.includes(filterStr)){
                             return true;
                         }
                     }
@@ -105,14 +105,20 @@ const Projects=()=>{
             }
 
             return false;
-        })
-        .map((proj,ind)=>{
-            const leKey=`proj${proj.projInfo.projId}`;
-
-            return <ProjectItem 
-                projInfo={proj.projInfo}
-                key={leKey}
-        />});
+        });
+        if (filteredProj.length===0){
+            return <Typography>No matches found!</Typography>
+        }
+        else {
+            return filteredProj.map((proj,ind)=>{
+                const leKey=`proj${proj.projInfo.projId}`;
+    
+                return <ProjectItem 
+                    projInfo={proj.projInfo}
+                    key={leKey}
+            />});
+        }
+        
     }
 
     return (

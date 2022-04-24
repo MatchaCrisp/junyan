@@ -7,7 +7,7 @@
     "portfolio",
     "projects"
   ],
-  "version": "0.6.1",
+  "version": "0.8.1",
   "private": true,
   "homepage":"https://matchacrisp.github.io/junyan",
   "dependencies": {

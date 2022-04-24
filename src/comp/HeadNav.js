@@ -38,9 +38,9 @@ const HeadNav = () =>{
     // for viewports wider than 700 px
     const stacks=()=>{
         return (
-            <Stack spacing={2} direction='row'>
-                <Button variant='text' href={__INT_NAV.about}>About</Button>
-                <Button variant='text' href={__INT_NAV.projects}>Projects</Button>
+            <Stack spacing={5} direction='row'>
+                <Button variant='outlined' href={__INT_NAV.about}>About</Button>
+                <Button variant='outlined' href={__INT_NAV.projects}>Projects</Button>
                 <Button variant='contained' href={__INT_NAV.contact}>Contact</Button>
             </Stack>
         )
@@ -97,7 +97,7 @@ const HeadNav = () =>{
                         sx={{
                             justifyContent: "space-between",
                             alignItems: "center",
-                            marginRight: "1rem"
+                            margin: "0.25rem 4rem 0.25rem 4rem"
                         }}
                     >
                         <Typography variant='h4' sx={{marginLeft:1}}>Junyan Ye</Typography>
