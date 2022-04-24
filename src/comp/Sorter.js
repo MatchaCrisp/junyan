@@ -1,75 +1,33 @@
-import React from 'react';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import SortIcon from '@mui/icons-material/Sort';
+import React, {useState} from 'react';
 
+import SortIcon from '@mui/icons-material/Sort';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 // component for sorting list of projects 
 // alphabetical order
 // reverse alphabetical order
 // newest
 // oldest
-const Sorter=({handleClick})=>{
-    // sort menu state
-    const [anchorElState, setAnchorElState] = useState(null);
-    const isOpen = Boolean(anElState);
-
-    // handles opening sort menu
-    const handleOpen = e => {
-        setAnchorElState(e.currentTarget);
-    }
-    //handles closing sort menu
-    const handleClose = () => {
-        setAnchorElState(null);
-    }
-
+const Sorter=({order,handleChange})=>{
     return (
-        <div className="collapsible-menu">
-            <Button
-                id='sort-button'
-                aria-controls={isOpen ? 'int-nav-menu' : undefined}
-                aria-haspopup='true'
-                aria-expanded={isOpen ? 'true' : undefined}
-                onClick={handleOpen}
+        <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }} size="small">
+            <InputLabel id="sort-label"><SortIcon /></InputLabel>
+            <Select
+                labelId="sort-label"
+                id="sort"
+                value={order}
+                label="Order"
+                onChange={handleChange}
             >
-                {isOpen ? <SortIcon /> : <SortIcon />}
-            </Button>
-            <Menu
-                id='int-nav-menu'
-                anchorEl={anchorElState}
-                open={isOpen}
-                onClose={handleClose}
-                MenuListProps={{
-                    'aria-labelledby': 'int-nav-button',
-                }}
-            >
-                <MenuItem onClick={() => {
-                    handleClose();
-                    handleClick("alph");
-                }}>
-                    A-Z
-                </MenuItem>
-                <MenuItem onClick={() => {
-                    handleClose();
-                    handleClick("rev_alph");
-                }}>
-                    Z-A
-                </MenuItem>
-                <MenuItem onClick={() => {
-                    handleClose();
-                    handleClick("newest");
-                }}>
-                    newest
-                </MenuItem>
-                <MenuItem onClick={() => {
-                    handleClose();
-                    handleClick("oldest");
-                }}>
-                    oldest
-                </MenuItem>
+                <MenuItem value={"alph"}>A-Z</MenuItem>
+                <MenuItem value={"rev_alph"}>Z-A</MenuItem>
+                <MenuItem value={"newest"}>newest</MenuItem>
+                <MenuItem value={"oldest"}>oldest</MenuItem>
+            </Select>
+        </FormControl>
 
-            </Menu>
-        </div>
     )
 
 }

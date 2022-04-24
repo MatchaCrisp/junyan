@@ -14,4 +14,11 @@
 .Projects>.MuiTypography-root{
     margin:0 0 1rem 0;
 }
+#proj-app-bar{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:end;
+    gap:10px;
+}
 

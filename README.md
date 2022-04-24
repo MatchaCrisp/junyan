@@ -53,3 +53,9 @@ HTML5
 - changed to max 3 columns
 - restructured file tree to faciliate img import and project import 
 - eliminated need for fetch
+
+### Apr 21 2022 v 0.6.2 New functions
+- add sort through mui select menu
+
+### Apr 23 2022 v 0.6.3 New functions
+- add search function through text input field (untested)

@@ -21,8 +21,8 @@ import '../stylesheets/HeadNav.scss';
 
 // constant converting certain keywords into internal navigation links
 const __INT_NAV={
-    "about":"#about",
-    "projects":"#projects",
+    "about":"#about-me",
+    "projects":"#projects-sect",
     "contact":"#contact"
 };
 

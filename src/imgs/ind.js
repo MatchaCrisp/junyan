@@ -12,7 +12,7 @@ import surveyImg from './survey.png';
 import technicalImg from './technical.png';
 import tributeImg from './tribute.png';
 
-export default {
+const images={
     "calculatorImage":calcImg,
     "cheesecakeEduImage":cheesecakeImg,
     "cupcakeBakeryImage":cupcakeImg,
@@ -27,3 +27,5 @@ export default {
     "technicalDocImage":technicalImg,
     "tributePageImage":tributeImg
 }
+
+export default images;
