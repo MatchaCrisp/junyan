@@ -1,6 +1,10 @@
+// EXTERNAL
+// react
 import React from 'react';
-import PropTypes from 'prop-types';
+// MUI
 import useScrollTrigger from '@mui/material/useScrollTrigger';
+import PropTypes from 'prop-types';
+
 const ElevScroll=(props)=>{
     const trigger=useScrollTrigger({
         disableHysteresis:true,

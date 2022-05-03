@@ -17,6 +17,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
 // INTERNAL
+// stylesheets
 import '../stylesheets/HeadNav.scss';
 
 // constant converting certain keywords into internal navigation links

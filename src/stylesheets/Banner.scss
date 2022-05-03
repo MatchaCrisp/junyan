@@ -1,0 +1,28 @@
+@import '__var.scss';
+
+#banner-sect {
+    max-width:1460px;
+    height:420px;
+    background-color: $col-blk1;
+    
+    position:relative;
+    z-index:0;
+    &>#banner-text {
+        width:100%;
+        height:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+        z-index:2;
+        color:$txt-wht1;
+    }
+    &>#banner-stars {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+    }
+}

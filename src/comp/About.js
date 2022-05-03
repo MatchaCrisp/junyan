@@ -4,6 +4,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
 // INTERNAL
+// stylesheets
 import '../stylesheets/About.scss';
 
 const About=()=>{

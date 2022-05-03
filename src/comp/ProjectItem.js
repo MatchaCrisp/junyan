@@ -15,9 +15,11 @@ import CardActionArea from '@mui/material/CardActionArea';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 // INTERNAL
+// icons and thumbnails
 import muiIcon from '../imgs/mui.png';
 import d3Icon from '../imgs/d3.png';
 import images from '../imgs/ind.js';
+// stylesheets
 import '../stylesheets/ProjectItem.scss';
 // structure of the passed in object
 /*

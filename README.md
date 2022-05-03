@@ -69,3 +69,12 @@ HTML5
 - fixed footer to bottom of page in event of no projects (search yielded no match)
 - added helper text in event of search yielding no match
 - fixed inconsistencies in new theme
+
+### May 2 2022 v 0.9.0 Animated banner
+- added react-spring package
+- added banner with animated backdrop simulating night sky
+- added focus hook to pause animation when tab not in focus
+- TODO: shooting stars
+- TODO: performance testing 
+- TODO: change about me section to reflect banner update
+- TODO: refactor/debug/comment

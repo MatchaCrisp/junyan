@@ -6,15 +6,15 @@ import React, {useState, useEffect} from 'react';
 import Typography from '@mui/material/Typography';
 
 // INTERNAL
-// individual project component
+// components
 import ProjectItem from './ProjectItem';
-// sort component
 import Sorter from './Sorter';
 import Searcher from './Searcher';
 
 // json file of all notable projects
 import projData from '../projs.json';
 
+// stylesheets
 import '../stylesheets/Projects.scss';
 
 // possible sort orders

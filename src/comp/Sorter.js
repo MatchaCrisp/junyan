@@ -1,5 +1,7 @@
-import React, {useState} from 'react';
-
+// EXTERNAL
+// react
+import React from 'react';
+// mui
 import SortIcon from '@mui/icons-material/Sort';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -13,7 +15,7 @@ import Select from '@mui/material/Select';
 const Sorter=({order,handleChange})=>{
     return (
         <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }} size="small">
-            <InputLabel id="sort-label"><SortIcon /></InputLabel>
+            <InputLabel id="sort-label" size="small"><SortIcon /></InputLabel>
             <Select
                 labelId="sort-label"
                 id="sort"

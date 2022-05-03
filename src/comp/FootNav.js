@@ -12,6 +12,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 
 // INTERNAL
+// stylesheets
 import '../stylesheets/FootNav.scss';
 
 // stores links relevant to website described by key
